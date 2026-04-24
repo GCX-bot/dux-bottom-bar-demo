@@ -421,6 +421,16 @@ svg {
   color: var(--text-inverse-3);
 }
 
+.copy-line-secondary--copy {
+  gap: 0;
+}
+
+.secondary-copy-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .stars {
   color: #ffcf4a;
   font-size: 11px;
@@ -455,6 +465,22 @@ svg {
   stroke-width: 2;
 }
 
+.phone[data-variant="v1"] .diversion-bar,
+.phone[data-variant="v2"] .diversion-bar {
+  background: rgba(30, 31, 33, 0.96);
+}
+
+.phone[data-variant="v1"] .download-btn,
+.phone[data-variant="v2"] .download-btn {
+  min-width: 72px;
+  width: auto;
+  padding: 0 0 0 10px;
+  background: transparent;
+  color: #f4c847;
+  font-weight: 600;
+  text-align: right;
+}
+
 .phone[data-state="boosted"][data-variant="v1"] .diversion-bar {
   height: 56px;
   padding-top: 8px;
@@ -468,13 +494,13 @@ svg {
 
 .phone[data-state="boosted"][data-variant="v1"] .download-btn,
 .phone[data-state="boosted"][data-variant="v2"] .download-btn {
-  background: #fff;
-  color: #161823;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: rgba(112, 111, 97, 0.92);
+  color: #f4c847;
 }
 
 .phone[data-state="boosted"][data-variant="v1"] .download-btn {
-  width: 80px;
-  height: 28px;
   animation: buttonPop 260ms ease;
 }
 
