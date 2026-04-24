@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>导流队列底 bar 样式迭代原型</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="workspace" aria-label="导流队列底 bar 样式迭代原型">
+      <section class="stage">
+        <div class="phone-shell" aria-label="抖音播放器预览">
+          <div class="phone" id="phone" data-variant="v2" data-state="normal">
+            <div class="video-bg">
+              <img
+                src="https://www.figma.com/api/mcp/asset/3a67887f-94b9-4431-8522-337af0cd5a66"
+                alt=""
+              />
+            </div>
+            <div class="top-mask"></div>
+            <div class="bottom-mask"></div>
+
+            <header class="status-bar" aria-hidden="true">
+              <span>9:41</span>
+              <div class="status-icons">
+                <i></i><i></i><i></i>
+              </div>
+            </header>
+
+            <nav class="feed-nav" aria-label="抖音频道">
+              <button aria-label="菜单" class="icon-button">
+                <svg viewBox="0 0 24 24"><path d="M3 6.5h18M3 12h18M3 17.5h18" /></svg>
+              </button>
+              <span>经验</span>
+              <span>北京</span>
+              <span>团购</span>
+              <span>关注</span>
+              <span>商城</span>
+              <strong>推荐</strong>
+              <button aria-label="搜索" class="icon-button">
+                <svg viewBox="0 0 24 24"><path d="m20 20-4.6-4.6M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z" /></svg>
+              </button>
+            </nav>
+
+            <aside class="action-rail" aria-label="播放器互动区">
+              <div class="avatar">
+                <img src="https://www.figma.com/api/mcp/asset/8384f6db-18a5-4467-b5de-1ff90dfd15e1" alt="" />
+                <span>+</span>
+              </div>
+              <button aria-label="点赞">
+                <svg viewBox="0 0 32 32"><path d="M16 27S4.5 20.1 4.5 11.8A6.1 6.1 0 0 1 15 7.5l1 1 1-1a6.1 6.1 0 0 1 10.5 4.3C27.5 20.1 16 27 16 27Z" /></svg>
+                <span>3.1万</span>
+              </button>
+              <button aria-label="评论">
+                <svg viewBox="0 0 32 32"><path d="M6 8.5A5.5 5.5 0 0 1 11.5 3h9A5.5 5.5 0 0 1 26 8.5v6A5.5 5.5 0 0 1 20.5 20H16l-6 5v-5A5.5 5.5 0 0 1 6 14.5v-6Z" /></svg>
+                <span>1054</span>
+              </button>
+              <button aria-label="收藏">
+                <svg viewBox="0 0 32 32"><path d="m16 3 4 8.1 9 1.3-6.5 6.3 1.5 8.9-8-4.2-8 4.2 1.5-8.9L3 12.4l9-1.3L16 3Z" /></svg>
+                <span>1.2万</span>
+              </button>
+              <button aria-label="分享">
+                <svg viewBox="0 0 32 32"><path d="M22 11 16 5l-6 6M16 6v16M7 17v6a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-6" /></svg>
+                <span>1.2万</span>
+              </button>
+              <div class="music-disc"></div>
+            </aside>
+
+            <section class="caption" aria-label="视频信息">
+              <div class="anchor-chip">
+                <span class="tiny-logo">购</span>
+                <span>购物</span>
+                <i></i>
+                <span>便携迷你纯净水</span>
+                <small>· 已售1.1w</small>
+              </div>
+              <strong>@胖墩儿</strong>
+              <p>特别可爱的小瓶水，家里的大宝贝小宝贝都喜欢喝。<b>#瓶装水</b></p>
+            </section>
+
+            <section class="diversion-bar" id="diversionBar" aria-label="导流底 bar">
+              <button class="bar-hit-area" id="barHitArea" type="button" aria-label="打开中间页"></button>
+              <div class="app-logo">
+                <img id="appLogo" src="https://www.figma.com/api/mcp/asset/601c6e07-b893-40b9-8365-741641432f8e" alt="" />
+              </div>
+              <div class="bar-copy">
+                <div class="copy-line-primary">
+                  <span id="barTitle">抖音商城</span>
+                  <i></i>
+                  <span id="barValue">天天有优惠 新人更便宜</span>
+                </div>
+                <div class="copy-line-secondary" id="secondaryLine">
+                  <span>4.9</span>
+                  <span class="stars">★★★★★</span>
+                  <small>千万用户推荐</small>
+                </div>
+              </div>
+              <button class="download-btn" id="downloadBtn" type="button">下载应用</button>
+              <button class="close-btn" id="closeBtn" type="button" aria-label="关闭底 bar">
+                <svg viewBox="0 0 12 12"><path d="M2 2l8 8M10 2l-8 8" /></svg>
+              </button>
+            </section>
+
+            <nav class="bottom-tabs" aria-label="抖音底部导航">
+              <strong>首页</strong>
+              <span>朋友</span>
+              <button aria-label="拍摄">
+                <svg viewBox="0 0 32 32"><path d="M16 7v18M7 16h18" /></svg>
+              </button>
+              <span>消息</span>
+              <span>我</span>
+            </nav>
+
+            <section class="middle-page" id="middlePage" aria-label="下载中间页" hidden>
+              <header>
+                <button id="returnBtn" type="button" aria-label="返回抖音">
+                  <svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" /></svg>
+                </button>
+                <span>中间页下载</span>
+              </header>
+              <div class="middle-card">
+                <img id="middleLogo" src="https://www.figma.com/api/mcp/asset/601c6e07-b893-40b9-8365-741641432f8e" alt="" />
+                <h2 id="middleTitle">抖音商城</h2>
+                <p>保持原跳转链路，仅承接底 bar 点击，不改变下载事件。</p>
+                <button type="button">应用市场下载</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="control-panel" aria-label="设计控制台">
+        <div class="panel-heading">
+          <p>Code first prototype</p>
+          <h1>导流队列底bar样式迭代</h1>
+        </div>
+
+        <div class="variant-tabs" role="tablist" aria-label="实验组">
+          <button class="active" type="button" data-variant-tab="v1">V1 线上 40%</button>
+          <button type="button" data-variant-tab="v2">V2 弱化 30%</button>
+          <button type="button" data-variant-tab="v3">V3 整合 30%</button>
+        </div>
+
+        <div class="state-grid" aria-label="状态切换">
+          <button class="active" type="button" data-state-button="normal">常规态</button>
+          <button type="button" data-state-button="boosted">强化态</button>
+          <button type="button" data-state-button="returned">返回回落</button>
+          <button type="button" data-state-button="suppressed">7 天不强化</button>
+        </div>
+
+        <div class="demo-actions" aria-label="交互演示">
+          <button type="button" id="triggerBoost">播放到强化时机</button>
+          <button type="button" id="openMiddle">点击底 bar</button>
+          <button type="button" id="closeBarAction">点击关闭</button>
+          <button type="button" id="resetDemo">重置</button>
+        </div>
+
+        <div class="status-card">
+          <span id="statusPill">V2 / 常规态</span>
+          <p id="statusText">保持 40px 单行组件，按钮为半透明次级样式。</p>
+        </div>
+
+        <div class="spec-tabs" role="tablist" aria-label="交付内容">
+          <button class="active" type="button" data-spec-tab="ui">UI 样式</button>
+          <button type="button" data-spec-tab="flow">跳转逻辑</button>
+          <button type="button" data-spec-tab="motion">动效/埋点</button>
+        </div>
+
+        <article class="spec-page active" id="spec-ui">
+          <h2>高保真覆盖</h2>
+          <ul>
+            <li>V1：保留线上常规态与双行强化态，作为对照组。</li>
+            <li>V2：常规态不变，强化态仅按钮样式变化，避免组件高度扩张。</li>
+            <li>V3：全程固定一种形态，移除独立下载按钮，整条 bar 可点击。</li>
+            <li>使用播放器暗色 Token：BGInverse3、BGInverse4、ConstTextInverse、12px Medium。</li>
+          </ul>
+        </article>
+
+        <article class="spec-page" id="spec-flow">
+          <h2>跳转与边界</h2>
+          <div class="flow-map" aria-label="底 bar 流程图">
+            <div>曝光常规态</div>
+            <span>强化时间到达</span>
+            <div>强化态</div>
+            <span>点击底 bar</span>
+            <div>中间页下载</div>
+            <span>返回抖音</span>
+            <div>回落常规态</div>
+            <span>点击关闭</span>
+            <div>7 天不再强化</div>
+          </div>
+        </article>
+
+        <article class="spec-page" id="spec-motion">
+          <h2>动效与埋点</h2>
+          <ul>
+            <li>V2 常规态到强化态：按钮 180ms 背景/文字颜色过渡，bar 尺寸保持稳定。</li>
+            <li>V2 退场回落：返回抖音后 240ms 回到常规按钮样式。</li>
+            <li>V3 触发时机：logo 与主标题播放一次轻量 pulse，不新增营销按钮。</li>
+            <li>埋点需带 `bottom_bar_style_group`、`bar_visual_state`、`suppress_until_days`。</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
